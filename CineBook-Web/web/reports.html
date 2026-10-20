@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reports | CineBook</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body data-page="reports">
+    <header class="topbar">
+        <div class="topbar-inner">
+            <a class="brand" href="index.html">Cine<span>Book</span></a>
+            <nav class="nav">
+                <a href="index.html" data-nav="home">Home</a>
+                <a href="bookings.html" data-nav="bookings">My Bookings</a>
+                <a href="cancel.html" data-nav="cancel">Cancel</a>
+                <a href="reports.html" data-nav="reports">Reports</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="wide">
+        <h1 class="page-title">Reports</h1>
+
+        <div class="stats" id="stats"></div>
+
+        <h2 class="sub-title">By show</h2>
+        <div class="table-wrap">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Show</th>
+                        <th>Seats sold</th>
+                        <th>Occupancy</th>
+                        <th>Active</th>
+                        <th>Cancelled</th>
+                        <th class="num">Revenue</th>
+                    </tr>
+                </thead>
+                <tbody id="report-shows"></tbody>
+            </table>
+        </div>
+
+        <h2 class="sub-title">By seat type</h2>
+        <div class="table-wrap">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Seat type</th>
+                        <th>Price</th>
+                        <th class="num">Seats sold</th>
+                    </tr>
+                </thead>
+                <tbody id="report-types"></tbody>
+            </table>
+        </div>
+
+        <p class="hint">Revenue counts the full amount of active bookings plus the 20% kept from cancelled ones.</p>
+    </main>
+
+    <script src="app.js"></script>
+</body>
+</html>

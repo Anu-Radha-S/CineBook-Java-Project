@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Seats | CineBook</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body data-page="book">
+    <header class="topbar">
+        <div class="topbar-inner">
+            <a class="brand" href="index.html">Cine<span>Book</span></a>
+            <nav class="nav">
+                <a href="index.html" data-nav="home">Home</a>
+                <a href="bookings.html" data-nav="bookings">My Bookings</a>
+                <a href="cancel.html" data-nav="cancel">Cancel</a>
+                <a href="reports.html" data-nav="reports">Reports</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="page-band">
+            <div class="page-band-inner">
+                <p class="eyebrow" id="book-time"></p>
+                <h1 class="band-title" id="book-title">Choose your seats</h1>
+                <p class="band-meta" id="book-details"></p>
+            </div>
+        </section>
+
+        <section class="book-layout">
+            <aside class="book-aside">
+                <div class="poster poster-md" id="book-poster"></div>
+
+                <div class="panel">
+                    <h3>Seat prices</h3>
+                    <ul class="price-list" id="price-list"></ul>
+                </div>
+
+                <div class="panel">
+                    <h3>Your seats</h3>
+                    <ul class="picked-list" id="picked-list"></ul>
+                    <label class="field-label" for="coupon">Coupon code</label>
+                    <input id="coupon" type="text" placeholder="e.g. CINE10" autocomplete="off">
+                    <p class="hint">The discount is applied when you book.</p>
+                    <div class="total-row">
+                        <span class="muted">Total</span>
+                        <strong id="total">Rs. 0.00</strong>
+                    </div>
+                    <div class="actions">
+                        <a class="btn btn-outline" href="index.html">Back</a>
+                        <button class="btn btn-primary" id="book-btn" disabled>Book seats</button>
+                    </div>
+                    <div class="notice" id="book-message" hidden></div>
+                </div>
+            </aside>
+
+            <div class="book-main">
+                <ol class="steps">
+                    <li class="active"><span>1</span> Choose seats</li>
+                    <li><span>2</span> Confirm</li>
+                    <li><span>3</span> Ticket</li>
+                </ol>
+
+                <div class="screen-wrap">
+                    <div class="screen"></div>
+                    <p class="screen-label">Screen</p>
+                </div>
+
+                <div class="seat-map" id="seat-map"></div>
+
+                <div class="legend">
+                    <span><i class="seat-key free"></i> Available</span>
+                    <span><i class="seat-key selected"></i> Selected</span>
+                    <span><i class="seat-key booked"></i> Booked</span>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="app.js"></script>
+</body>
+</html>

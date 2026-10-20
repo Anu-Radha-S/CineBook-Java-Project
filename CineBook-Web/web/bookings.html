@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Bookings | CineBook</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body data-page="bookings">
+    <header class="topbar">
+        <div class="topbar-inner">
+            <a class="brand" href="index.html">Cine<span>Book</span></a>
+            <nav class="nav">
+                <a href="index.html" data-nav="home">Home</a>
+                <a href="bookings.html" data-nav="bookings">My Bookings</a>
+                <a href="cancel.html" data-nav="cancel">Cancel</a>
+                <a href="reports.html" data-nav="reports">Reports</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="wide">
+        <p class="eyebrow">History</p>
+        <h1 class="page-title">My bookings</h1>
+
+        <div class="table-wrap">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Booking ID</th>
+                        <th>Show</th>
+                        <th>Seats</th>
+                        <th>Total</th>
+                        <th>Status</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody id="bookings"></tbody>
+            </table>
+        </div>
+    </main>
+
+    <script src="app.js"></script>
+</body>
+</html>

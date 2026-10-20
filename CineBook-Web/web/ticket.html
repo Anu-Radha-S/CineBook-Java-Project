@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Ticket | CineBook</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body data-page="ticket">
+    <header class="topbar">
+        <div class="topbar-inner">
+            <a class="brand" href="index.html">Cine<span>Book</span></a>
+            <nav class="nav">
+                <a href="index.html" data-nav="home">Home</a>
+                <a href="bookings.html" data-nav="bookings">My Bookings</a>
+                <a href="cancel.html" data-nav="cancel">Cancel</a>
+                <a href="reports.html" data-nav="reports">Reports</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="narrow">
+        <p class="eyebrow" id="ticket-eyebrow">Ticket</p>
+        <h1 class="page-title" id="ticket-heading">Your ticket</h1>
+
+        <div class="ticket" id="ticket" hidden>
+            <div class="ticket-main">
+                <p class="ticket-label">Movie</p>
+                <h2 class="ticket-title" id="t-movie"></h2>
+                <div class="ticket-grid">
+                    <div><p class="ticket-label">Time</p><p id="t-time"></p></div>
+                    <div><p class="ticket-label">Booking ID</p><p id="t-id"></p></div>
+                    <div class="span-2"><p class="ticket-label">Seats</p><p id="t-seats"></p></div>
+                    <div><p class="ticket-label">Total</p><p id="t-total"></p></div>
+                    <div><p class="ticket-label">Status</p><p id="t-status"></p></div>
+                </div>
+            </div>
+            <div class="ticket-stub">
+                <div class="barcode" id="barcode"></div>
+                <p class="ticket-code" id="t-code"></p>
+            </div>
+        </div>
+
+        <div class="notice" id="ticket-message" hidden></div>
+
+        <div class="actions">
+            <a class="btn btn-primary" href="index.html">Book another</a>
+            <a class="btn btn-outline" href="bookings.html">My bookings</a>
+            <a class="btn btn-outline btn-danger" id="ticket-cancel" href="cancel.html" hidden>Cancel this booking</a>
+        </div>
+    </main>
+
+    <script src="app.js"></script>
+</body>
+</html>
